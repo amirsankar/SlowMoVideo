@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="toG-so-fDr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera-->
+        <scene sceneID="aoR-vj-M2e">
+            <objects>
+                <viewController id="Gvo-Y1-f8g" customClass="CameraViewController" customModule="SloMoVideo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ik-j4-6wK"/>
+                        <viewControllerLayoutGuide type="bottom" id="dn4-6M-vcH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MMu-rX-Nla">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMT-pf-sGq">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHY-Qd-EaK">
+                                        <rect key="frame" x="328" y="13" width="47" height="30"/>
+                                        <state key="normal" title="Switch"/>
+                                        <connections>
+                                            <action selector="switchCamDirection:" destination="Gvo-Y1-f8g" eventType="touchUpInside" id="pqs-1n-8fN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NMT-pf-sGq" secondAttribute="height" multiplier="75:11" id="WXj-eg-gsN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evy-jb-PR1">
+                                <rect key="frame" x="-4" y="525" width="383" height="93"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGF-bQ-0zN">
+                                        <rect key="frame" x="161" y="17" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="1xB-ZV-ESB"/>
+                                            <constraint firstAttribute="width" constant="60" id="cHl-1h-d39"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="recordButton"/>
+                                        <connections>
+                                            <action selector="recordButton:" destination="Gvo-Y1-f8g" eventType="touchUpInside" id="fL6-jB-Mt4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="CGF-bQ-0zN" firstAttribute="centerX" secondItem="evy-jb-PR1" secondAttribute="centerX" id="KQQ-Yn-jSp"/>
+                                    <constraint firstItem="CGF-bQ-0zN" firstAttribute="centerY" secondItem="evy-jb-PR1" secondAttribute="centerY" id="UG6-rO-OkS"/>
+                                    <constraint firstAttribute="width" secondItem="evy-jb-PR1" secondAttribute="height" multiplier="375:91" id="VEf-Sn-dVr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfr-uS-nMu">
+                                <rect key="frame" x="-4" y="56" width="383" height="469"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dn4-6M-vcH" firstAttribute="top" secondItem="evy-jb-PR1" secondAttribute="bottom" id="3vP-hQ-Q25"/>
+                            <constraint firstItem="NMT-pf-sGq" firstAttribute="top" secondItem="MMu-rX-Nla" secondAttribute="topMargin" id="AHR-Ac-ocD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bfr-uS-nMu" secondAttribute="trailing" constant="-20" id="B4a-mf-tfH"/>
+                            <constraint firstItem="NMT-pf-sGq" firstAttribute="leading" secondItem="MMu-rX-Nla" secondAttribute="leadingMargin" constant="-20" id="JYv-iM-bVT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NMT-pf-sGq" secondAttribute="trailing" constant="-20" id="R9O-4b-blR"/>
+                            <constraint firstItem="evy-jb-PR1" firstAttribute="leading" secondItem="MMu-rX-Nla" secondAttribute="leadingMargin" constant="-20" id="fhP-XC-YNy"/>
+                            <constraint firstItem="bfr-uS-nMu" firstAttribute="top" secondItem="NMT-pf-sGq" secondAttribute="bottom" id="hnQ-4f-ONG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="evy-jb-PR1" secondAttribute="trailing" constant="-20" id="o3D-ib-TNg"/>
+                            <constraint firstItem="bfr-uS-nMu" firstAttribute="leading" secondItem="MMu-rX-Nla" secondAttribute="leadingMargin" constant="-20" id="ov7-tY-2Tw"/>
+                            <constraint firstItem="evy-jb-PR1" firstAttribute="top" secondItem="bfr-uS-nMu" secondAttribute="bottom" id="t8d-za-YDS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" image=" active (1)" id="op7-WU-ajY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="recordButtonOutlet" destination="CGF-bQ-0zN" id="uLR-J6-WTt"/>
+                        <outlet property="videoPreview" destination="bfr-uS-nMu" id="3yu-qR-3ea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5B-Ql-OQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1867.5" y="211.5"/>
+        </scene>
+        <!--Library View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LibraryViewController" customModule="SloMoVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jvx-g2-KOd">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.66666666666666663" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jU8-7T-nay">
+                                    <size key="itemSize" width="110" height="110"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6AC-Rv-jYD" customClass="movieCell" customModule="SloMoVideo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWy-Qj-e9K">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="lWy-Qj-e9K" firstAttribute="leading" secondItem="6AC-Rv-jYD" secondAttribute="leadingMargin" constant="-8" id="C53-Nu-t3b"/>
+                                            <constraint firstItem="lWy-Qj-e9K" firstAttribute="top" secondItem="6AC-Rv-jYD" secondAttribute="topMargin" constant="-8" id="Gkj-dp-GJh"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="lWy-Qj-e9K" secondAttribute="trailing" constant="-8" id="V6y-xM-9rj"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="lWy-Qj-e9K" secondAttribute="bottom" constant="-8" id="rSS-qe-khi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="lWy-Qj-e9K" id="4m8-5b-sGJ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yky-NU-eVy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PDb-tf-AjL"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jvx-g2-KOd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PCl-Zk-f4m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jvx-g2-KOd" secondAttribute="trailing" constant="-20" id="nq2-q8-dhn"/>
+                            <constraint firstItem="jvx-g2-KOd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ptN-ZU-TnO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jvx-g2-KOd" secondAttribute="bottom" id="qO5-2W-6oU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="D68-ue-ljG"/>
+                    <connections>
+                        <outlet property="collectionView" destination="jvx-g2-KOd" id="49X-aZ-jRe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="879"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zN5-ht-F31">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="toG-so-fDr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="uYS-o3-knB">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Wwt-BT-iSj" kind="relationship" relationship="viewControllers" id="zIa-2K-VeG"/>
+                        <segue destination="Gvo-Y1-f8g" kind="relationship" relationship="viewControllers" id="6ti-R1-PYL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lG4-rs-5Pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="329"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="E1S-Hr-JHb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wwt-BT-iSj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Videos" image="filmRoll" id="Pc2-n8-nGQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H5p-cj-bjK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Q22-uJ-66Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEW-Vn-K4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056" y="879"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name=" active (1)" width="32" height="32"/>
+        <image name="filmRoll" width="40" height="40"/>
+        <image name="recordButton" width="720" height="720"/>
+    </resources>
+</document>
